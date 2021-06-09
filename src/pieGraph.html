@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title> American Coffee </title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/d3.v6.min.js"></script>
+
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body background="data/background.jpg" style="background-repeat:no-repeat; background-size: 100% 100%; background-attachment:fixed">
+	<div style="top: 5%; left: 85%; position: absolute; font-size: 18px;">
+        <select id="value_selection" name="value_selection" onchange="ValueSelection()">
+            <option value="sales" selected>sales</option>
+            <option value="profit">profit</option>
+        </select>
+    </div>
+	<div id='container'>
+		<div id='tooltip'></div>
+		<svg></svg>
+	</div>
+    <div style="top: 90%; left: 90%; position: absolute; font-size: 16px; font-family: STSong;">
+		<a href="index.html">返回主界面</a>
+	</div>
+<script src="js/data.js"></script>
+<script src="js/pieGraph.js"></script>
+
+</body>

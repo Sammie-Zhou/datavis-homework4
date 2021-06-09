@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title> American Coffee </title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/d3.v6.min.js"></script>
+
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body background="data/background.jpg" style="background-repeat:no-repeat; background-size: 100% 100%; background-attachment:fixed">
+	<div style="top: 30%; left: 5%; position: absolute; font-size: 20px;">
+	<div style="font-family: STSong; font-size: 18px;">纵轴</div>
+	<select id="y_selection" name="y_selection" onchange="getTableType();">
+		<option value="profit">profit</option>
+		<option value="sales" selected>sales</option>
+	</select>
+	</div>
+	<div style="top: 10%; left: 85%; position: absolute; font-size: 16px;">
+	<select id="state_selection" name="state_selection" onchange="StateSelection();">
+		<option value="all" selected>All States</option>
+		<option value="CO">CO</option>
+		<option value="NY">NY</option>
+		<option value="IA">IA</option>
+		<option value="WA">WA</option>
+		<option value="MO">MO</option>
+		<option value="OK">OK</option>
+		<option value="TX">TX</option>
+		<option value="NV">NV</option>
+		<option value="LA">LA</option>
+		<option value="NH">NH</option>
+		<option value="WI">WI</option>
+		<option value="OR">OR</option>
+		<option value="UT">UT</option>
+		<option value="CA">CA</option>
+		<option value="OH">OH</option>
+		<option value="CT">CT</option>
+		<option value="FL">FL</option>
+		<option value="MA">MA</option>
+		<option value="IL">IL</option>
+		<option value="NM">NM</option>
+	</select>
+	</div>
+	<div style="top: 15%; left: 85%; position: absolute; font-size: 16px;">
+	<select id="category_selection" name="category_selection" onchange="StateSelection()">
+		<option value="all" selected>All Categories</option>
+		<option value="Coffee">Coffee</option>
+		<option value="Herbal Tea">Herbal Tea</option>
+		<option value="Espresso">Espresso</option>
+		<option value="Tea">Tea</option>
+	</select>
+	</div>
+	<div style="top: 90%; left: 90%; position: absolute; font-size: 16px; font-family: STSong;">
+		<a href="index.html">返回主界面</a>
+	</div>
+	<div id='container'>
+		<div id='tooltip'></div>
+	
+		<svg></svg>
+	</div>
+	<div id="pie">
+		<div id="tooltip"></div>
+		<svg></svg>
+	</div>
+		
+<script src="js/data.js"></script>
+<script src="js/barGraph.js"></script>
+
+</body>
